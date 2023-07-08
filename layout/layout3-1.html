@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>layout3-1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: #f3e5f5;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        header {
+            width: 100%;
+            height: 150px;
+            background: #e1bee7;
+        }
+        aside {
+            float: left;
+            width: 30%;
+            height: 700px;
+            background: #ce93d8;
+        }
+        section {
+            float: left;
+            width: 70%;
+            height: 700px;
+            background: #ba68c8;
+        }
+        footer {
+            clear: both;
+            width: 100%;
+            height: 150px;
+            background: #ab47bc;
+        }
+        @media (max-width: 1220px) {
+            #wrap {width: 95%;} /* 나머지 2.5% 2.5% 마진으로줌 */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </div>
+</body>
+</html>
