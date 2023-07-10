@@ -24,3 +24,19 @@ body, input, textarea, select, button, table {
     font-size: 13px; 
     line-height: 1.5;
 }
+
+/* font style reset */
+em, address {
+    font-style: normal;
+}
+
+/* bullet reset */
+ul, li, ol {
+    list-style: none;
+}
+
+/* title tag reset */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 13px; 
+    font-weight: normal;
+}

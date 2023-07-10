@@ -11,16 +11,20 @@
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- pavicon -->
     <link rel="shortcut icon" href="icon/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="icon/favicon-152.png">
-    <link rel="icon" href="path/to/favicon.png">
+    <!-- <link rel="icon" href="path/to/favicon.png"> -->
     <link rel="icon" href="icon/favicon-16.png" sizes="16x16"> 
     <link rel="icon" href="icon/favicon-32.png" sizes="32x32"> 
     <link rel="icon" href="icon/favicon-48.png" sizes="48x48"> 
     <link rel="icon" href="icon/favicon-64.png" sizes="64x64"> 
     <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
+
+    <!-- web font -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
     <!-- javascript -->
     <script src="js/jquery_1.12.4.js"></script>
@@ -28,10 +32,35 @@
 </head>
 <body>
     <header id="header">
-        <div class="header_menu">
-            <a href="#">Blog</a>
-            <a href="#">Github</a>
-            <a href="#">Webstandard</a>
+        <div class="container">
+            <div class="row"> <!-- for res-padding -->
+                <div class="header">
+                    <div class="header_menu">
+                        <a href="#">Blog</a>
+                        <a href="#">Github</a>
+                        <a href="#">Webstandard</a>
+                    </div>
+                    <!-- //header_menu-->
+                    <div class="header_tit">
+                        <h1>Professional Web Publisher</h1><br>
+                        <a href="https://github.com/eunsooo">github/eunsooo</a>
+                    </div>
+                     <!-- //header_tit-->
+                    <div class="header_icon">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-html5"></i><span>HTML5</span></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i><span>GitHub</span></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- //header_icon -->
+                    <!-- 
+                        https://developers.facebook.com/tools/debug/
+                        https://cards-dev.twitter.com/validator
+                    -->
+                </div>
+            </div>
         </div>
     </header>
     <!-- //header -->

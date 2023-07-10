@@ -1,6 +1,145 @@
 @charset "utf-8";
 
+$breakpoint-pc: 1200px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+$color-main1: #3192bf;
+$color-main2: #257fac;
+$color-shadow: rgba(75, 154, 191, 0.9);
+
+@mixin pc {
+    @media (max-width: #{$breakpoint-pc + 20}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
 /* layout */
 #header {
-    
+    background: url(../img/header_bg.jpg) repeat-x center top;
+}
+
+/* container */
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    background: rgba($color: #000000, $alpha: 0.2);
+}
+
+/* header */
+.header {
+    height: 327px;
+    .header_menu {
+        text-align: right;
+        a {
+            display: inline-block;
+            padding: 8px 0 6px 10px;
+            font-family: 'Abel', sans-serif;
+            color: #fff;
+            transition: color 0.3s ease;
+            &:hover {color: #ccc;}
+        }
+    }
+    .header_tit {
+        margin: 55px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Abel', sans-serif;
+        h1 {
+            display: inline-block;
+            padding: 5px 30px;
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+            background: #51b0dc;
+            transition: box-shadow 0.25s ease-in-out;
+            &:hover {
+                box-shadow: 
+                    inset -9em 0 0 0 $color-main2,
+                    inset 9em 0 0 0 $color-main2;
+            }
+        }
+        a {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #4a9abf;
+            transition: box-shadow 0.25s ease-in-out;
+            &:hover {
+                box-shadow: 
+                    0 0 0 5px $color-shadow inset,
+                    0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+            }
+        }
+    }
+    .header_icon {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 45px;
+        li {
+            display: inline;
+            margin: 0 2px;
+            a {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                font-size: 35px;
+                line-height: 60px;
+                color: #fff;
+                background-color: $color-main1;
+                transition: all 0.3s ease;
+                &:hover {
+                    box-shadow: 
+                        0 0 0 3px $color-shadow inset,
+                        0 0 0 100px rgba(0, 0, 0, 0.1) inset;;
+                    span {
+                        opacity: 1;
+                        top: -33px;
+                    }
+                }
+                span {
+                    opacity: 0;
+                    position: absolute;
+                    padding: 3px 9px;
+                    top: -40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 6px 0;
+                    font-size: 12px;
+                    line-height: 1.6;
+                    background: $color-main1;
+                    transition: all 0.3s ease;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        margin-left: -5px;
+                        left: 50%;
+                        bottom: -5px;
+                        border-top: 5px solid $color-main1;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mediaqiery */
+@include pc {
+    .container {width: 100%;}
+    .row {padding: 0 15px;}
 }
