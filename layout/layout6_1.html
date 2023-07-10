@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background: #eeeeee;
+        }
+        article {
+            width: 100%;
+            height: 300px;
+            background: #e0e0e0;
+        }
+        section {
+            overflow: hidden;
+            padding: 5%;
+            width: 90%;
+            background: #bdbdbd;
+        }
+        section > div {
+            float: left;
+            margin: 1%;
+            width: 18%;
+            height: 170px;
+            border-radius: 5px;
+            background: #848484;
+        }
+        footer {
+            width: 100%;
+            height: 100px;
+            background: #9e9e9e;
+        }
+
+        @media (min-width: 769px) and (max-width: 1220px) {
+            #wrap {width: 100%;}
+            section > div {width: 23%;}
+            section > div:nth-child(5n) {display: none;}
+        }
+        @media (max-width: 768px) {
+            #wrap {width: 100%;}
+            section > div {width: 31.3333%;}
+            section > div:nth-child(5) {display: all;}
+        }
+        @media (max-width: 480px) {
+            section > div {width: 48%;}
+            section > div:nth-child(5n) {display: none;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <article></article>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+</html>

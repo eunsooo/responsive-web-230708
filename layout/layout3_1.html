@@ -9,7 +9,7 @@
             margin: 0;
         }
         body {
-            background: #f3e5f5;
+            background: #fafafa;
         }
         #wrap {
             margin: 0 auto;
@@ -18,28 +18,49 @@
         header {
             width: 100%;
             height: 150px;
-            background: #e1bee7;
+            background: #e0e0e0;
         }
         aside {
             float: left;
             width: 30%;
             height: 700px;
-            background: #ce93d8;
+            background: #bdbdbd;
         }
         section {
             float: left;
             width: 70%;
             height: 700px;
-            background: #ba68c8;
+            background: #9e9e9e;
         }
         footer {
             clear: both;
             width: 100%;
             height: 150px;
-            background: #ab47bc;
+            background: #757575;
         }
+
+        /* 화면 너비 0 ~ 1200px */
         @media (max-width: 1220px) {
             #wrap {width: 95%;} /* 나머지 2.5% 2.5% 마진으로줌 */
+        }
+        /* 화면 너비 0 ~ 768px */
+        @media (max-width: 768px) {
+            #wrap {width: 100%;}
+        }
+        /* 화면 너비 0 ~ 480px */
+        @media (max-width: 480px) {
+            #wrap {width: 100%;}
+            header {height: 300px;}
+            aside {
+                float: none;
+                width: 100%;
+                height: 300px;
+            }
+            section {
+                float: none;
+                width: 100%;
+                height: 300px;
+            }
         }
     </style>
 </head>
