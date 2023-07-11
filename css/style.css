@@ -11,11 +11,62 @@ body {
   background-color: #eaf7fd;
 }
 
+#contents .container {
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+#contents #cont_left {
+  float: left;
+  width: 250px;
+}
+#contents #cont_center {
+  overflow: hidden;
+  margin-right: 250px;
+  min-height: 1300px;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+#contents #cont_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+}
+@media (max-width: 1220px) {
+  #contents .container {
+    border: 0;
+  }
+}
+@media (max-width: 960px) {
+  #contents #cont_right {
+    position: static;
+    width: 100%;
+    border-top: 1px solid #dbdbdb;
+  }
+  #contents #cont_center {
+    margin-right: 0;
+    border-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  #contents #cont_left {
+    float: none;
+    width: 100%;
+  }
+  #contents #cont_center {
+    border-left: 0;
+  }
+}
+
+#footer {
+  border-top: 1px solid #dbdbdb;
+}
+
 /* container */
 .container {
+  position: relative;
   margin: 0 auto;
   width: 1200px;
-  background: rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 1220px) {
   .container {
@@ -63,7 +114,7 @@ body {
   transition: box-shadow 0.25s ease-in-out;
 }
 .header .header_tit h1:hover {
-  box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;
+  box-shadow: inset -9em 0 0 0 #3192bf, inset 9em 0 0 0 #3192bf;
 }
 .header .header_tit a {
   padding: 10px 20px;
@@ -268,14 +319,55 @@ body {
   }
 }
 
-/* mediaquery */
-@media (max-width: 1220px) {
-  .container {
-    width: 100%;
-  }
-  .row {
-    padding: 0 15px;
-  }
+/* contents */
+.column {
+  padding: 10px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.column.col3 {
+  border-bottom: 0;
+}
+.column.col6 {
+  border-bottom: 0;
+}
+.column.col9 {
+  border-bottom: 0;
+}
+.column .col_tit {
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: #3192bf;
+}
+.column .col_desc {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #dbdbdb;
+  line-height: 18px;
+  color: #878787;
+}
+
+/* menu */
+.menu li {
+  position: relative;
+}
+.menu li a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #878787;
+  border-bottom: 1px solid #dbdbdb;
+  transition: box-shadow 0.34s ease, background 0.34s ease;
+}
+.menu li a:hover {
+  color: #fff;
+  background: rgba(49, 146, 191, 0.7);
+  box-shadow: inset 180px 0 0 0 #3192bf;
+}
+.menu li a i {
+  position: absolute;
+  top: 15px;
+  right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
