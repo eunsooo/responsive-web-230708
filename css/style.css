@@ -345,6 +345,48 @@ body {
   line-height: 18px;
   color: #878787;
 }
+@media (max-width: 600px) {
+  .column.col1 {
+    padding: 0;
+    border-bottom: 0;
+  }
+  .column.col1 .col_tit {
+    display: none;
+  }
+  .column.col1 .col_desc {
+    display: none;
+  }
+  .column.col1 .menu ul {
+    overflow: hidden;
+  }
+  .column.col1 .menu ul li {
+    float: left;
+    box-sizing: border-box;
+    width: 33.3333%;
+    text-align: center;
+    border-right: 1px solid #dbdbdb;
+  }
+  .column.col1 .menu ul li:nth-child(3n) {
+    border-right: 0;
+  }
+  .column.col1 .menu ul li a {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  .column.col1 .menu ul li a:hover {
+    box-shadow: none;
+    background: rgba(49, 146, 191, 0.5);
+  }
+  .column.col1 .menu ul li a i {
+    display: none;
+  }
+  .column.col2 {
+    background: #fff;
+  }
+  .column.col4 {
+    border-top: 1px solid #dbdbdb;
+  }
+}
 
 /* menu */
 .menu li {

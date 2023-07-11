@@ -362,6 +362,44 @@ body {
         line-height: 18px;
         color: $color-subtext;
     }
+    @include res-600px {
+        &.col1 {
+            padding: 0;
+            border-bottom: 0;
+            .col_tit {display: none;}
+            .col_desc {display: none;}
+            .menu {
+                ul {
+                    overflow: hidden;
+                    li {
+                        float: left;
+                        box-sizing: border-box;
+                        width: 33.3333%;
+                        text-align: center;
+                        border-right: $border_grey;
+                        &:nth-child(3n) {border-right: 0;}
+                        a {
+                            color: #fff;
+                            text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+                            &:hover {
+                                box-shadow: none;
+                                background: rgba($color-main, 0.5);
+                            }
+                            i {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.col2 {
+            background: #fff;
+        }
+        &.col4 {
+            border-top: $border_grey;
+        }
+    }
 }
 
 /* menu */
