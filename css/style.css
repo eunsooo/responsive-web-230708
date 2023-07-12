@@ -412,4 +412,119 @@ body {
   right: 10px;
 }
 
+/* notice1 */
+.notice1 {
+  position: relative;
+}
+.notice1 h5 {
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #3192bf;
+}
+.notice1 ul li {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice1 ul li:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #3192bf;
+}
+.notice1 .more {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #878787;
+}
+
+/* notice2 */
+.notice2 {
+  position: relative;
+}
+.notice2 h5 {
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #3192bf;
+}
+.notice2 ul li {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.notice2 ul li:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #3192bf;
+}
+.notice2 .more {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #878787;
+}
+
+/* blog1 */
+.blog1 img {
+  width: 100%;
+}
+.blog1 .img-retina {
+  display: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+  .blog1 .img-normal {
+    display: none;
+  }
+  .blog1 .img-retina {
+    display: initial;
+  }
+}
+
+/* blog2 */
+.blog2 .img-retina {
+  background: url(../img/blog4_@1.jpg);
+  background-size: cover;
+}
+.blog2 .img-retina h5 {
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.blog2 .img-retina p {
+  padding-top: 5px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {
+  .blog2 .img-retina {
+    background-image: url(../img/blog4_@2.jpg);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx) {
+  .blog2 .img-retina {
+    background-image: url(../img/blog4_@3.jpg);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
