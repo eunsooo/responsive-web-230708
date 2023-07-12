@@ -527,4 +527,121 @@ body {
   }
 }
 
+/* image slider */
+.slider figure {
+  position: relative;
+}
+.slider figure figcaption {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.slider figure figcaption em {
+  display: block;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "Abel", sans-serif;
+  text-transform: uppercase;
+  transition: all 0.84s ease;
+  transform: translateX(50px);
+}
+.slider figure figcaption span {
+  opacity: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all 0.84s 0.2s ease;
+  transform: translateX(50px);
+}
+.slider .slick-active figcaption em {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slider .slick-active figcaption span {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slider .slick-dots {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.slider .slick-dots li {
+  display: inline-block;
+  margin: 5px;
+  width: 10px;
+  height: 10px;
+}
+.slider .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-radius: 50%;
+  background: #3192bf;
+  cursor: pointer;
+}
+.slider .slick-dots li.slick-active button {
+  background: #277599;
+}
+.slider .slick-prev {
+  z-index: 1000;
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background: none;
+}
+.slider .slick-prev::before {
+  content: "\f053";
+  font: var(--fa-font-solid);
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  color: #3192bf;
+  text-indent: 0;
+}
+.slider .slick-next {
+  z-index: 1000;
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background: none;
+}
+.slider .slick-next::before {
+  content: "\f054";
+  font: var(--fa-font-solid);
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  color: #3192bf;
+  text-indent: 0;
+}
+@media (max-width: 600px) {
+  .slider figure figcaption {
+    padding: 10px;
+  }
+  .slider figure figcaption em {
+    font: 18px;
+  }
+  .slider figure figcaption span {
+    font-size: 14px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
