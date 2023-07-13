@@ -25,3 +25,31 @@ $(".slider").slick({
         } 
     }]
 });
+
+// lightbox
+$(".lightbox").lightGallery({
+    autoplay: true,
+    pause: 3000,
+    progressBar: true
+});
+
+/* button expand/collapse */
+$(".btn").click(function(e){
+    e.preventDefault();  /* #기능 깨기 */
+    $(".nav").slideToggle();
+    $(".btn").toggleClass("open");
+    
+    if( $(".btn").hasClass("open") ){
+        $(".btn").find("i").attr("class", "fa fa-angle-up");
+    } else {
+        $(".btn").find("i").attr("class", "fa fa-angle-down");
+    }
+});
+
+// hide navigation (res-600px)
+$(window).resize(function(){
+    var wWidth = $(window).width();
+    if(wWidth > 600) {
+        $(".nav").removeAttr("style");
+    }
+});
